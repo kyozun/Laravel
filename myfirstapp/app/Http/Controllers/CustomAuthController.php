@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Hash;
 use Session;
-use App\Models\User;
+use App\Models\Book;
 use Illuminate\Support\Facades\Auth;
 class CustomAuthController extends Controller
 {
@@ -59,8 +59,9 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            $users = User::all();
-            return view('dashboard',compact('users'));
+            $book= Book::all();
+
+            return view('dashboard',compact('book'));
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');

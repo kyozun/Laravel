@@ -26,7 +26,7 @@ Route::get('register', [CustomAuthController::class, 'register'])->name('registe
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
-Route::resource('users', \App\Http\Controllers\UsersController::class);
+
 
 
 

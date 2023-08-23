@@ -3,18 +3,20 @@
 <head>
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 
 <div class="container">
     <nav class="navbar navbar-info navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
-        <div class="container">
+        <div class="container d-flex justify-content-between">
             <a class="navbar-brand mr-auto" href="">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="d-flex mx-2 ">
+                          <input type="search" class="form-control rounded me-2 w-100" aria-label="Search" aria-describedby="search-addon" />
+                          <button type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="" id="navbarNav">
                 <ul class="navbar-nav">
                     @guest
                         <li class="nav-item">
@@ -36,23 +38,27 @@
                 </ul>
             </div>
         </div>
+
     </nav>
+
+
 
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">IDDD</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
+            <th scope="col">Book Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Public Year</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
-        @foreach ($users as $user)
+        @foreach ($book as $book)
             <tr>
-                <td>{{$user ->id }}</td>
-                <td>{{$user ->name }}</td>
-                <td>{{$user ->email }}</td>
+                <td>{{$book ->bookid }}</td>
+                <td>{{$book ->title }}</td>
+                <td>{{$book ->pub_year }}</td>
+
                 <td class="">
                     <button type="button" class="btn btn-primary me-1">Add</button>
                     <button type="button" class="btn btn-warning me-1">Edit</button>
