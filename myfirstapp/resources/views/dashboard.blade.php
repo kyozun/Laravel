@@ -9,14 +9,14 @@
 <body>
 
 <div class="container">
-    <nav class="navbar navbar-info navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-info navbar-expand-lg mb-4 p-3" style="background-color: #e3f2fd;">
         <div class="container d-flex justify-content-between">
-            <a class="navbar-brand mr-auto" href="">Home</a>
-            <div class="d-flex mx-2 ">
+            <a class="navbar-brand mr-auto " href="">Home</a>
+            <div class="d-flex mx-2 w-50">
                           <input type="search" class="form-control rounded me-2 w-100" aria-label="Search" aria-describedby="search-addon" />
                           <button type="button" class="btn btn-primary">Search</button>
             </div>
-            <div class="" id="navbarNav">
+            <div class="w-30" id="navbarNav">
                 <ul class="navbar-nav">
                     @guest
                         <li class="nav-item">
@@ -48,6 +48,7 @@
         <tr>
             <th scope="col">Book Id</th>
             <th scope="col">Title</th>
+            <th scope="col">ISBN</th>
             <th scope="col">Public Year</th>
             <th scope="col">Action</th>
         </tr>
@@ -57,6 +58,7 @@
             <tr>
                 <td>{{$book ->bookid }}</td>
                 <td>{{$book ->title }}</td>
+                <td>{{$book ->ISBN }}</td>
                 <td>{{$book ->pub_year }}</td>
 
                 <td class="">
